@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Jomhuria&family=Noto+Sans+Mono:wght@100..900&family=Space+Grotesk:wght@300..700&display=swap");
+
+$text-light-mode: black;
+$text-dark-mode: white;
+$bg-light-mode: white;
+$bg-dark-mode: black;
+$hover-color: rgba(129, 31, 175, 0.733);
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans Mono", monospace;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#particles-js {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.main-title {
+  position: relative;
+  z-index: 1;
+}
+
+.main-title h1 {
+  padding: 1rem;
+  font-size: 8rem;
+  color: $text-light-mode;
+  transition: 1s;
+}
+
+.main-title h1:hover {
+  transition: 1s;
+  color: $hover-color;
+}
+
+.main-title p {
+  font-size: 0.75rem;
+  color: $text-light-mode;
+  padding: 2rem;
+}
+
+.main-title button {
+  background-color: $text-dark-mode;
+  width: 20%;
+  height: 40px;
+  background-color: transparent;
+  color: $text-light-mode;
+  font-weight: 700;
+  border-color: $text-light-mode;
+  cursor: pointer;
+  border-radius: 30px;
+  font-size: 1rem;
+  transition: 0.4s;
+
+  &:hover {
+    transform: scale(1.08);
+    transition: 0.4s;
+  }
+}
+
+/* Responsividade */
+
+@media (max-width: 1200px) {
+  .main-title h1 {
+    font-size: 6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-title h1 {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-title h1 {
+    font-size: 2.5rem;
+    padding: 1rem;
+  }
+}
