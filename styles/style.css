@@ -6,6 +6,7 @@
 
 .light-theme {
   --bg: var(--white);
+  --bg2: var(--black);
   --fontColor: var(--black);
   --btnBg: var(--black);
   --btnFontColor: var(--white);
@@ -13,6 +14,7 @@
 
 .dark-theme {
   --bg: var(--black);
+  --bg2: var(--white);
   --fontColor: var(--white);
   --btnBg: var(--white);
   --btnFontColor: var(--black);
@@ -53,12 +55,12 @@ body {
   padding: 1rem;
   font-size: 8rem;
   color: var(--fontColor);
-  transition: 1s;
+  transition: 3s;
 }
 
 .main-title h1:hover {
-  transition: 1s;
-  color: rgba(173, 73, 62, 0.582);
+  transition: 2s;
+  color: #ff5151;
 }
 
 .main-title p {
@@ -72,8 +74,8 @@ body {
   width: 20%;
   height: 40px;
   color: var(--fontColor);
-  font-weight: 700;
-  border: 2px solid var(--fontColor);
+  font-weight: 500;
+  border: 2px solid var(--bg2);
   cursor: pointer;
   border-radius: 30px;
   font-size: 1rem;
@@ -84,8 +86,19 @@ body {
   transition: 0.4s;
 }
 
-.main-title button {
-  border-color: var(--fontColor);
+.icon {
+  padding: 30px;
+}
+
+.icon a {
+  color: var(--fontColor);
+  display: inline-block;
+  transition: transform 0.8s;
+}
+
+.icon a:hover {
+  transform: scale(2);
+  transition: transform 0.8s;
 }
 
 /* Responsividade */
