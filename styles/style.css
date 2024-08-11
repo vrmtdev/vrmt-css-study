@@ -33,6 +33,7 @@ body {
   justify-content: center;
   text-align: center;
   background-color: var(--bg);
+  transition: 1.5s;
 }
 
 #particles-js {
