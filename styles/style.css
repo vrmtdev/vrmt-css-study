@@ -1,4 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Jomhuria&family=Noto+Sans+Mono:wght@100..900&family=Space+Grotesk:wght@300..700&display=swap");
+:root {
+  --white: white;
+  --black: black;
+}
+
+.light-theme {
+  --bg: var(--white);
+  --fontColor: var(--black);
+  --btnBg: var(--black);
+  --btnFontColor: var(--white);
+}
+
+.dark-theme {
+  --bg: var(--black);
+  --fontColor: var(--white);
+  --btnBg: var(--white);
+  --btnFontColor: var(--black);
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -13,6 +32,7 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
+  background-color: var(--bg);
 }
 
 #particles-js {
@@ -31,29 +51,28 @@ body {
 .main-title h1 {
   padding: 1rem;
   font-size: 8rem;
-  color: black;
+  color: var(--fontColor);
   transition: 1s;
 }
 
 .main-title h1:hover {
   transition: 1s;
-  color: rgba(129, 31, 175, 0.733);
+  color: rgba(173, 73, 62, 0.582);
 }
 
 .main-title p {
   font-size: 0.75rem;
-  color: black;
+  color: var(--fontColor);
   padding: 2rem;
 }
 
 .main-title button {
-  background-color: white;
+  background-color: transparent;
   width: 20%;
   height: 40px;
-  background-color: transparent;
-  color: black;
+  color: var(--fontColor);
   font-weight: 700;
-  border-color: black;
+  border: 2px solid var(--fontColor);
   cursor: pointer;
   border-radius: 30px;
   font-size: 1rem;
@@ -62,6 +81,10 @@ body {
 .main-title button:hover {
   transform: scale(1.08);
   transition: 0.4s;
+}
+
+.main-title button {
+  border-color: var(--fontColor);
 }
 
 /* Responsividade */
