@@ -7,9 +7,9 @@ switcher.addEventListener("click", function () {
 
   var className = document.body.className;
   if (className.includes("dark-theme")) {
-    this.textContent = "Light mode";
+    this.textContent = "☀️";
   } else {
-    this.textContent = "Dark mode";
+    this.textContent = "🌙";
   }
 
   console.log("current class name: " + className);

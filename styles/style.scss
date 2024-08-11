@@ -7,18 +7,12 @@
 
 .light-theme {
   --bg: var(--white);
-  --bg2: var(--black);
   --fontColor: var(--black);
-  --btnBg: var(--black);
-  --btnFontColor: var(--white);
 }
 
 .dark-theme {
   --bg: var(--black);
-  --bg2: var(--white);
   --fontColor: var(--white);
-  --btnBg: var(--white);
-  --btnFontColor: var(--black);
 }
 
 * {
@@ -26,6 +20,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Noto Sans Mono", monospace;
+  overflow: hidden;
 }
 
 body {
@@ -57,6 +52,19 @@ body {
   font-size: 8rem;
   color: var(--fontColor);
   transition: 3s;
+  animation: slide 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+//animation//
+@keyframes slide {
+  0% {
+    -webkit-transform: translateX(70%);
+    transform: translateX(70%);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
 }
 
 .main-title h1:hover {
@@ -68,28 +76,44 @@ body {
   font-size: 0.75rem;
   color: var(--fontColor);
   padding: 2rem;
+  animation: slide 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+//animation//
+
+@keyframes slide {
+  0% {
+    -webkit-transform: translateX(70%);
+    transform: translateX(70%);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
 }
 
 .main-title button {
-  background-color: transparent;
-  width: 20%;
-  height: 40px;
+  width: 72px;
+  height: 48px;
   color: var(--fontColor);
   font-weight: 500;
-  border: 2px solid var(--bg2);
+  background-color: transparent;
+  border: none;
   cursor: pointer;
   border-radius: 30px;
   font-size: 1rem;
-  transition: 0.4s;
+  transition: 0.7s;
 
   &:hover {
-    transform: scale(1.08);
-    transition: 0.4s;
+    transform: scale(1.2);
+    transition: 0.7s;
+    box-shadow: 0 0 25px red;
   }
 }
 
 .icon {
-  padding: 30px;
+  padding: 20px;
+  transform: translateY(30%);
 }
 
 .icon a {
@@ -99,7 +123,7 @@ body {
 }
 
 .icon a:hover {
-  transform: scale(2);
+  transform: scale(3);
   transition: transform 0.8s;
 }
 
